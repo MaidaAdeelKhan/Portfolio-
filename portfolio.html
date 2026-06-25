@@ -1,231 +1,520 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" class="h-full">
- <head>
-  <meta charset="UTF-8">
-  <title>Maida Khan | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap');
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<head>
+    <meta charset="UTF-8">
+    <title>Maida Khan | Product Manager, Designer & Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Maida Khan - CS undergraduate, product-minded designer, developer, strategist, editor, and digital content creator based in Lahore, Pakistan.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-    html, body {
-      height: 100%;
-      scroll-behavior: smooth;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0f0c29;
-    }
+        html, body {
+            min-height: 100%;
+            scroll-behavior: smooth;
+        }
 
-    /* Enhanced Background */
-    .gradient-bg {
-      background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 50%, #0a0a20 100%);
-      position: relative;
-      min-height: 100vh;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #070719;
+            color: #e0e7ff;
+        }
 
-    /* Typography Color Fixes */
-    .primary-text { color: #e0e7ff; } /* Light Indigo/Lavender */
-    .secondary-text { color: #94a3b8; } /* Cool Gray/Blue */
-    .accent-cyan { color: #22d3ee; }
+        .gradient-bg {
+            background: radial-gradient(circle at 15% 10%, rgba(167, 139, 250, 0.24), transparent 32rem), radial-gradient(circle at 85% 20%, rgba(34, 211, 238, 0.18), transparent 28rem), radial-gradient(circle at 50% 90%, rgba(251, 113, 133, 0.14), transparent 30rem), linear-gradient(135deg, #0f0c29 0%, #17174a 52%, #070719 100%);
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    .display-font { font-family: 'Playfair Display', serif; }
+        .primary-text {
+            color: #e0e7ff;
+        }
 
-    .gradient-text {
-      background: linear-gradient(90deg, #a78bfa, #38bdf8, #fb7185);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 900;
-    }
+        .secondary-text {
+            color: #a8b3cf;
+        }
 
-    .glass-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.3s ease;
-    }
+        .muted-text {
+            color: #7c89aa;
+        }
 
-    .glass-card:hover {
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(167, 139, 250, 0.5);
-      transform: translateY(-5px);
-    }
+        .accent-cyan {
+            color: #22d3ee;
+        }
 
-    .skill-badge {
-      background: rgba(167, 139, 250, 0.1);
-      border: 1px solid rgba(167, 139, 250, 0.3);
-      color: #c7d2fe;
-      transition: all 0.3s ease;
-    }
+        .accent-pink {
+            color: #fb7185;
+        }
 
-    .skill-badge:hover {
-      background: rgba(167, 139, 250, 0.2);
-      box-shadow: 0 0 15px rgba(167, 139, 250, 0.4);
-    }
+        .display-font {
+            font-family: 'Playfair Display', serif;
+        }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-    }
-    .floating { animation: float 3s ease-in-out infinite; }
-  </style>
- </head>
- <body class="h-full">
-  <div class="gradient-bg">
-   
-   <header class="sticky top-0 z-50 glass-card">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold display-font gradient-text">Maida Khan</h1>
-      <ul class="hidden md:flex gap-8 text-sm font-medium primary-text">
-       <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
-       <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
-       <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
-       <li><a href="#projects" class="hover:text-cyan-400 transition">Experience</a></li>
-       <li><a href="#contact" class="hover:text-cyan-400 transition">Contact</a></li>
-      </ul>
-    </nav>
-   </header>
+        .gradient-text {
+            background: linear-gradient(90deg, #c4b5fd, #38bdf8, #fb7185);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
 
-   <section id="home" class="min-h-screen flex items-center justify-center px-6">
-    <div class="text-center max-w-4xl">
-     <div class="floating mb-8">
-      <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-purple-500 to-cyan-400 p-1">
-       <div class="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-6xl">👩‍💻</div>
-      </div>
-     </div>
-     <h2 class="text-6xl md:text-7xl mb-6 display-font gradient-text">Maida Khan</h2>
-     <p class="text-2xl primary-text font-light mb-8">BSCS Student</p>
-     <div class="flex gap-4 justify-center">
-        <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition">View My Work</a>
-        <a href="#contact" class="px-8 py-3 glass-card primary-text rounded-full font-bold hover:bg-white/10 transition">Get In Touch</a>
-     </div>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.055);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.22);
+            transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+        }
+
+            .glass-card:hover {
+                background: rgba(255, 255, 255, 0.082);
+                border-color: rgba(167, 139, 250, 0.46);
+                transform: translateY(-4px);
+            }
+
+        .pill {
+            background: rgba(34, 211, 238, 0.1);
+            border: 1px solid rgba(34, 211, 238, 0.26);
+            color: #bae6fd;
+        }
+
+        .skill-badge {
+            background: rgba(167, 139, 250, 0.11);
+            border: 1px solid rgba(167, 139, 250, 0.32);
+            color: #ddd6fe;
+            transition: all 0.28s ease;
+        }
+
+            .skill-badge:hover {
+                background: rgba(167, 139, 250, 0.2);
+                box-shadow: 0 0 18px rgba(167, 139, 250, 0.35);
+                transform: translateY(-2px);
+            }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .floating {
+            animation: float 3.4s ease-in-out infinite;
+        }
+
+        .marquee-shell {
+            overflow: hidden;
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 1.25rem;
+            width: max-content;
+            animation: marquee 40s linear infinite;
+        }
+
+        .marquee-shell:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        .marquee-card {
+            width: 290px;
+            flex: 0 0 auto;
+        }
+
+        .placeholder-img {
+            min-height: 178px;
+            background: linear-gradient(135deg, rgba(167, 139, 250, 0.22), rgba(34, 211, 238, 0.14)), repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 10px, transparent 10px 20px);
+            border: 1px dashed rgba(255, 255, 255, 0.22);
+        }
+
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -1.05rem;
+            top: 0.72rem;
+            width: 0.72rem;
+            height: 0.72rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #a78bfa, #22d3ee);
+            box-shadow: 0 0 0 6px rgba(34, 211, 238, 0.08);
+        }
+
+        .marquee-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg">
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/55 backdrop-blur-xl">
+            <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold display-font gradient-text">Maida Khan</a>
+                <ul class="hidden md:flex gap-7 text-sm font-semibold primary-text">
+                    <li><a href="#about" class="hover:text-cyan-300 transition">About</a></li>
+                    <li><a href="#skills" class="hover:text-cyan-300 transition">Skills</a></li>
+                    <li><a href="#experience" class="hover:text-cyan-300 transition">Experience</a></li>
+                    <li><a href="#projects" class="hover:text-cyan-300 transition">Projects</a></li>
+                    <li><a href="#showcase" class="hover:text-cyan-300 transition">Certificates</a></li>
+                    <li><a href="#contact" class="hover:text-cyan-300 transition">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="min-h-screen flex items-center justify-center px-6 py-20">
+                <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 pill rounded-full px-4 py-2 text-sm font-bold mb-6">
+                            <span>Available for freelance, design, web & product collaborations</span>
+                        </div>
+                        <h1 class="text-5xl md:text-7xl leading-tight display-font gradient-text mb-6">Maida Khan</h1>
+                        <p class="text-2xl md:text-3xl primary-text font-light mb-4">Product Manager | CS Undergraduate</p>
+                        <p class="text-lg md:text-xl secondary-text max-w-2xl leading-relaxed mb-8">Designer, developer, strategist, editor, and digital content creator building user-focused interfaces, content systems, and data-informed digital experiences.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-500 text-white rounded-full font-bold shadow-lg shadow-cyan-950/40 hover:scale-105 transition">View My Work</a>
+                            <a href="#contact" class="px-8 py-3 glass-card primary-text rounded-full font-bold hover:bg-white/10 transition">Get In Touch</a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-[2rem] p-8 floating">
+                        <div class="w-36 h-36 mx-auto rounded-full bg-gradient-to-br from-purple-500 via-cyan-400 to-pink-400 p-1 mb-7">
+                            <div class="w-full h-full rounded-full bg-slate-950 flex items-center justify-center text-6xl">👩‍💻</div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-white/5 rounded-2xl p-4"><p class="text-3xl font-black accent-cyan">2023-27</p><p class="secondary-text text-sm">BSCS</p></div>
+                            <div class="bg-white/5 rounded-2xl p-4"><p class="text-3xl font-black accent-pink">5+</p><p class="secondary-text text-sm">Roles</p></div>
+                            <div class="bg-white/5 rounded-2xl p-4"><p class="text-3xl font-black text-purple-300">10+</p><p class="secondary-text text-sm">Certifications</p></div>
+                            <div class="bg-white/5 rounded-2xl p-4"><p class="text-3xl font-black text-cyan-200">PK</p><p class="secondary-text text-sm">Lahore</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="py-24 px-6">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-8 text-center">About Me</h2>
+                    <div class="glass-card rounded-3xl p-8 md:p-10">
+                        <p class="text-lg primary-text leading-relaxed text-center">I am a Computer Science undergraduate at Bahria University Lahore with a product-minded blend of UI/UX, web development, graphic design, video editing, teaching, and social media strategy. My work connects creativity with measurable outcomes: designing visuals, improving content pipelines, tracking engagement, and building user-friendly digital experiences.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="py-24 px-6 bg-black/20">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-12 text-center">Skills & Tools</h2>
+                    <div class="grid lg:grid-cols-3 gap-6 mb-10">
+                        <div class="glass-card rounded-3xl p-7"><h3 class="text-xl font-bold accent-cyan mb-4">Design & Content</h3><p class="secondary-text leading-relaxed">Graphic design, logo design, UI/UX design, photography, videography, video editing, branded content, and campaign visuals.</p></div>
+                        <div class="glass-card rounded-3xl p-7"><h3 class="text-xl font-bold accent-cyan mb-4">Development</h3><p class="secondary-text leading-relaxed">HTML, CSS, JavaScript, Bootstrap, React.js, Node.js, Python, SQL, and interactive frontend experiences.</p></div>
+                        <div class="glass-card rounded-3xl p-7"><h3 class="text-xl font-bold accent-cyan mb-4">Product & Operations</h3><p class="secondary-text leading-relaxed">KPI thinking, analytics, stakeholder communication, teaching, documentation, logistics coordination, and team collaboration.</p></div>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Microsoft Word Expert</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">HTML/CSS/JavaScript</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Bootstrap</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">React.js</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Node.js</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Python</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">SQL</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Cloud Basics</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Graphic Design</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Video Editing</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Teaching</span>
+                        <span class="skill-badge px-5 py-3 rounded-full font-semibold">Communication</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="py-24 px-6">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-12 text-center">Professional Experience</h2>
+                    <div class="space-y-6 border-l border-white/10 pl-6 md:pl-9">
+                        <article class="glass-card rounded-3xl p-7 relative timeline-dot">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4"><div><h3 class="text-2xl font-bold accent-cyan">Graphic Designer, Video Editor & Social Media Handler</h3><p class="text-purple-300 font-semibold">NUSK IT Consultancy Ltd</p></div><span class="secondary-text font-semibold">Feb 2025 - Present</span></div>
+                            <ul class="grid md:grid-cols-2 gap-3 secondary-text list-disc list-inside"><li>Own end-to-end content pipeline for impressions, engagement, and follower growth.</li><li>Define KPIs and iterate content strategy from platform analytics.</li><li>Create branded graphics and videos aligned with positioning and audience personas.</li><li>Coordinate formats, cadence, and channels through feedback loops.</li></ul>
+                        </article>
+                        <article class="glass-card rounded-3xl p-7 relative timeline-dot">
+                            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4"><div><h3 class="text-2xl font-bold accent-cyan">X/Twitter Graphic Designer - Growth & Monetisation</h3><p class="text-purple-300 font-semibold">NEXA Strategies Ltd</p></div><span class="secondary-text font-semibold">2024 - Present</span></div>
+                            <ul class="grid md:grid-cols-2 gap-3 secondary-text list-disc list-inside"><li>Designed reach-optimized posts supporting monetisation milestones.</li><li>Analyzed engagement, CTR, impressions, and follower growth for weekly roadmaps.</li><li>Aligned visual output with campaign goals and brand voice.</li><li>Supported consistent creative direction across social channels.</li></ul>
+                        </article>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <article class="glass-card rounded-3xl p-7 relative timeline-dot"><h3 class="text-xl font-bold primary-text">UI/UX Designer Intern</h3><p class="text-purple-300 font-semibold">Bronto Brains</p><p class="secondary-text mt-2">2024 - Present</p><p class="secondary-text mt-3">Delivered creative design solutions under tight deadlines while balancing innovation and practical implementation.</p></article>
+                            <article class="glass-card rounded-3xl p-7 relative timeline-dot"><h3 class="text-xl font-bold primary-text">Cloud Engineering Intern</h3><p class="text-purple-300 font-semibold">Zee Outsourcing Solutions</p><p class="secondary-text mt-2">2024 - Present</p><p class="secondary-text mt-3">Gained exposure to AWS, Azure, GCP, deployment, scaling, monitoring, virtualization, containers, and serverless concepts.</p></article>
+                            <article class="glass-card rounded-3xl p-7 relative timeline-dot"><h3 class="text-xl font-bold primary-text">Admissions Department Intern</h3><p class="text-purple-300 font-semibold">Bahria University Lahore</p><p class="secondary-text mt-2">Jul - Aug 2024</p><p class="secondary-text mt-3">Identified workflow inefficiencies, supported applicant data handling, and strengthened stakeholder communication.</p></article>
+                            <article class="glass-card rounded-3xl p-7 relative timeline-dot"><h3 class="text-xl font-bold primary-text">Online Computer Science Teacher</h3><p class="text-purple-300 font-semibold">Al-Suffah Academy & Avalon Academy</p><p class="secondary-text mt-2">Aug 2023 - Jun 2025</p><p class="secondary-text mt-3">Designed CS curriculum, adapted lessons from learner feedback, and managed course delivery from planning to outcomes.</p></article>
+                        </div>
+                        <article class="glass-card rounded-3xl p-7 relative timeline-dot"><h3 class="text-xl font-bold primary-text">Dispatcher - Call Centre</h3><p class="text-purple-300 font-semibold">Fast X Logistics</p><p class="secondary-text mt-3">Managed real-time logistics coordination under pressure and resolved operational blockers quickly.</p></article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="py-24 px-6 bg-black/20">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-12 text-center">Projects</h2>
+                    <div class="grid lg:grid-cols-2 gap-6">
+                        <article class="glass-card rounded-3xl p-8"><p class="pill inline-block rounded-full px-3 py-1 text-xs font-bold mb-4">Machine Learning</p><h3 class="text-2xl font-bold accent-cyan mb-3">Cancer Research Classification</h3><p class="secondary-text leading-relaxed mb-4">Compared feature selection and model evaluation methods, showing RF-selected features outperform MI-selected features in stability and predictive accuracy.</p><ul class="secondary-text list-disc list-inside space-y-2"><li>Built learning curves and correlation heatmaps.</li><li>Validated model robustness using actual vs predicted plots.</li></ul></article>
+                        <article class="glass-card rounded-3xl p-8"><p class="pill inline-block rounded-full px-3 py-1 text-xs font-bold mb-4">Web Application</p><h3 class="text-2xl font-bold accent-cyan mb-3">MoodWave - Mood-Based Music Recommendation</h3><p class="secondary-text leading-relaxed mb-4">A Spotify-inspired music recommendation application combining UI/UX design with web development fundamentals.</p><ul class="secondary-text list-disc list-inside space-y-2"><li>Used HTML, CSS, JavaScript, Python, SQL, Node.js, and React.js.</li><li>Added playback concepts, genre filtering, and top-rated song recommendations.</li></ul></article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="py-24 px-6">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-12 text-center">Education</h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="glass-card rounded-3xl p-7"><h3 class="text-xl font-bold primary-text">BSCS - Computer Science</h3><p class="text-purple-300 mt-2">Bahria University Lahore</p><p class="secondary-text mt-2">2023 - 2027</p></div>
+                        <div class="glass-card rounded-3xl p-7"><h3 class="text-xl font-bold primary-text">Intermediate - ICS</h3><p class="text-purple-300 mt-2">PGC College</p><p class="secondary-text mt-2">2021 - 2023</p></div>
+                        <div class="glass-card rounded-3xl p-7"><h3 class="text-xl font-bold primary-text">Matriculation - Computer Science</h3><p class="text-purple-300 mt-2">KIPS School</p><p class="secondary-text mt-2">2019 - 2021</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="showcase" class="py-24 px-6 bg-black/20">
+                <div class="max-w-7xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-5 text-center">Certificates & Awards</h2>
+                    <p class="secondary-text text-center max-w-3xl mx-auto mb-12">Replace each placeholder image with your real certificate or award picture. The rows move right-to-left nonstop and pause on hover.</p>
+
+                    <div class="mb-16">
+                        <div class="flex items-end justify-between gap-4 mb-6"><h3 class="text-3xl display-font font-bold primary-text">Certificates</h3></div>
+                        <div class="marquee-shell">
+                            <div class="marquee-track">
+                                <!-- Certificate 1 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/RZhTnSF0/certificates-1.jpg" alt="Microsoft Word Specialist – Word Associate" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Microsoft Word Expert Certification</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded professional certification in Word and Word 2019.</p>
+                                </div>
+
+                                <!-- Certificate 2 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/c4H3FDNh/certificates-2.jpg" alt="Character Certificate – KIPS School " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Character Certificate – KIPS School </h4>
+                                    <p class="secondary-text text-sm mt-1">Certified for exemplary conduct and behavior during academic session.</p>
+                                </div>
+
+                                <!-- Certificate 3 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/xCQQdFRT/certificates-7.jpg" alt="Certificate of Participation – SheStrike Gaming Competition" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Participation – SheStrike Gaming Competition</h4>
+                                    <p class="secondary-text text-sm mt-1">Recognized for active participation in women‑focused gaming event.</p>
+                                </div>
+
+                                <!-- Certificate 4 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/Pxyg5fJp/certificates-10.jpg" alt="Certificate of Appreciation – Bahria University (Women’s Day)" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – Bahria University (Women’s Day)</h4>
+                                    <p class="secondary-text text-sm mt-1">Recognized as Graphic Design Lead for SheCodes the Future event.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/2yX1pDfq/certificates-3.jpg" alt="Certificate of Appreciation – Bahria University (Blitz 2024) " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – Bahria University (Blitz 2024) </h4>
+                                    <p class="secondary-text text-sm mt-1">Professional certification in photography techniques, video production, and editing.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/RhQNFHfL/certificates-4.jpg" alt="Certificate of Appreciation – GDG On Campus BULC  " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">
+                                        Certificate of Appreciation – GDG On Campus BULC  <h4>
+                                            <p class="secondary-text text-sm mt-1">Awarded for outstanding service in Graphic Design Lead</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/BbgnsGf3/certificates-5.jpg" alt="Certificate of Appreciation – IEEE BULC Open House ’24 " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – IEEE BULC Open House ’24 </h4>
+                                    <p class="secondary-text text-sm mt-1">Acknowledged for contributions in Photography/Videography Team.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/cCX02Mw5/certificates-6.jpg" alt="Volunteer Service Certificate – IEEE BULC " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Volunteer Service Certificate – IEEE BULC </h4>
+                                    <p class="secondary-text text-sm mt-1">Certified for active participation and commitment in 2024–25 tenure.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/TwdsF80D/certificates-8.jpg" alt="Certificate of Participation – IEEE BULC CodeX ’25" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Participation – IEEE BULC CodeX ’25</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded for participation in flagship coding event.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/MGx3fkhs/certificates-9.jpg" alt="Certificate of Appreciation – IEEE BULC CodeX ’25" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – IEEE BULC CodeX ’25</h4>
+                                    <p class="secondary-text text-sm mt-1">Acknowledged for valuable support as Photography Team member.</p>
+                                </div>
+
+                                <!-- DUPLICATE for seamless loop -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/RZhTnSF0/certificates-1.jpg" alt="Microsoft Word Specialist – Word Associate" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Microsoft Word Expert Certification</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded professional certification in Word and Word 2019.</p>
+                                </div>
+
+                                <!-- Certificate 2 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/c4H3FDNh/certificates-2.jpg" alt="Character Certificate – KIPS School " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Character Certificate – KIPS School </h4>
+                                    <p class="secondary-text text-sm mt-1">Certified for exemplary conduct and behavior during academic session.</p>
+                                </div>
+
+                                <!-- Certificate 3 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/xCQQdFRT/certificates-7.jpg" alt="Certificate of Participation – SheStrike Gaming Competition" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Participation – SheStrike Gaming Competition</h4>
+                                    <p class="secondary-text text-sm mt-1">Recognized for active participation in women‑focused gaming event.</p>
+                                </div>
+
+                                <!-- Certificate 4 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/Pxyg5fJp/certificates-10.jpg" alt="Certificate of Appreciation – Bahria University (Women’s Day)" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – Bahria University (Women’s Day)</h4>
+                                    <p class="secondary-text text-sm mt-1">Recognized as Graphic Design Lead for SheCodes the Future event.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/2yX1pDfq/certificates-3.jpg" alt="Certificate of Appreciation – Bahria University (Blitz 2024) " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – Bahria University (Blitz 2024) </h4>
+                                    <p class="secondary-text text-sm mt-1">Professional certification in photography techniques, video production, and editing.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/RhQNFHfL/certificates-4.jpg" alt="Certificate of Appreciation – GDG On Campus BULC  " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">
+                                        Certificate of Appreciation – GDG On Campus BULC  <h4>
+                                            <p class="secondary-text text-sm mt-1">Awarded for outstanding service in Graphic Design Lead</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/BbgnsGf3/certificates-5.jpg" alt="Certificate of Appreciation – IEEE BULC Open House ’24 " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – IEEE BULC Open House ’24 </h4>
+                                    <p class="secondary-text text-sm mt-1">Acknowledged for contributions in Photography/Videography Team.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/cCX02Mw5/certificates-6.jpg" alt="Volunteer Service Certificate – IEEE BULC " class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Volunteer Service Certificate – IEEE BULC </h4>
+                                    <p class="secondary-text text-sm mt-1">Certified for active participation and commitment in 2024–25 tenure.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/TwdsF80D/certificates-8.jpg" alt="Certificate of Participation – IEEE BULC CodeX ’25" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Participation – IEEE BULC CodeX ’25</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded for participation in flagship coding event.</p>
+                                </div>
+
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/MGx3fkhs/certificates-9.jpg" alt="Certificate of Appreciation – IEEE BULC CodeX ’25" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Certificate of Appreciation – IEEE BULC CodeX ’25</h4>
+                                    <p class="secondary-text text-sm mt-1">Acknowledged for valuable support as Photography Team member.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex items-end justify-between gap-4 mb-6"><h3 class="text-3xl display-font font-bold primary-text">Awards</h3></div>
+                        <div class="marquee-shell">
+                            <div class="marquee-track" style="animation-duration: 36s;">
+                                <!-- Award 1 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/ZR2B9mCg/Whats-App-Image-2026-06-25-at-7-06-19-PM-(1).jpg" alt="Best Design Award" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">UI/UX Design Award</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded by GDG UI/UX for outstanding user interface and experience design and Event organization.</p>
+                                </div>
+
+                                <!-- Award 2 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/cHK8hC3c/Whats-App-Image-2026-06-25-at-7-06-36-PM.jpg" alt="Graphic Design Award" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">GDG Graphic Design Lead</h4>
+                                    <p class="secondary-text text-sm mt-1">Recognized for performance in design as a Lead in tenure.</p>
+                                </div>
+
+                                <!-- Award 3 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/Pf0rYKKB/Whats-App-Image-2026-06-25-at-7-06-19-PM.jpg" alt="Leadership Award" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Women day Organizer Award</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded for outstanding leadership in Women day event organizations and community initiatives.</p>
+                                </div>
+
+                                <!-- Award 4 -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/qv17hrF8/Whats-App-Image-2026-06-25-at-7-06-18-PM.jpg" alt="IEEE tenure" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">IEEE BULC Member</h4>
+                                    <p class="secondary-text text-sm mt-1">IEEE tenure 2024-2025 as a member of Photography/Videography team.</p>
+                                </div>
+
+                                <!-- DUPLICATE for seamless loop -->
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/ZR2B9mCg/Whats-App-Image-2026-06-25-at-7-06-19-PM-(1).jpg" alt="Best Design Award" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">UI/UX Design Award</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded by GDG UI/UX for outstanding user interface and experience design and Event organization.</p>
+                                </div>
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/cHK8hC3c/Whats-App-Image-2026-06-25-at-7-06-36-PM.jpg" alt="Graphic Design Award" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">GDG Graphic Design Lead</h4>
+                                    <p class="secondary-text text-sm mt-1">Recognized for performance in design as a Lead in tenure.</p>
+                                </div>
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/Pf0rYKKB/Whats-App-Image-2026-06-25-at-7-06-19-PM.jpg" alt="Leadership Award" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">Women day Organizer Award</h4>
+                                    <p class="secondary-text text-sm mt-1">Awarded for outstanding leadership in Women day event organizations and community initiatives.</p>
+                                </div>
+                                <div class="marquee-card glass-card rounded-3xl p-4">
+                                    <img src="https://i.postimg.cc/qv17hrF8/Whats-App-Image-2026-06-25-at-7-06-18-PM.jpg" alt="IEEE tenure" class="rounded-2xl w-full h-auto">
+                                    <h4 class="primary-text font-bold mt-4">IEEE BULC Member</h4>
+                                    <p class="secondary-text text-sm mt-1">IEEE tenure 2024-2025 as a member of Photography/Videography team.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-24 px-6">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold display-font gradient-text mb-12 text-center">Get In Touch</h2>
+                    <div class="glass-card rounded-3xl p-8 md:p-10 text-center">
+                        <div class="grid md:grid-cols-4 gap-6 mb-10">
+                            <div class="bg-white/5 rounded-2xl p-5"><div class="text-3xl mb-2">✉️</div><p class="accent-cyan font-bold uppercase tracking-widest text-xs">Email</p><a href="mailto:maidakhan1974@gmail.com" class="primary-text text-sm hover:text-cyan-300 break-all">maidakhan1974@gmail.com</a></div>
+                            <div class="bg-white/5 rounded-2xl p-5"><div class="text-3xl mb-2">📞</div><p class="accent-cyan font-bold uppercase tracking-widest text-xs">Phone</p><a href="tel:+923064122780" class="primary-text text-sm hover:text-cyan-300">+92-306-4122780</a></div>
+                            <div class="bg-white/5 rounded-2xl p-5"><div class="text-3xl mb-2">💼</div><p class="accent-cyan font-bold uppercase tracking-widest text-xs">LinkedIn</p><a href="https://linkedin.com/in/maddy-khanam-962189302" class="primary-text text-sm hover:text-cyan-300 break-all">maddy-khanam-962189302</a></div>
+                            <div class="bg-white/5 rounded-2xl p-5"><div class="text-3xl mb-2">🧩</div><p class="accent-cyan font-bold uppercase tracking-widest text-xs">GitHub</p><a href="https://github.com/MaidaAdeelKhan" class="primary-text text-sm hover:text-cyan-300 break-all">MaidaAdeelKhan</a></div>
+                        </div>
+                        <p class="text-purple-300 italic">Open to freelance projects, internships, product work, UI/UX design, web development, and creative collaborations.</p>
+                        <p class="secondary-text text-sm mt-4">Lahore, Pakistan</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="py-10 text-center border-t border-white/10">
+            <p class="secondary-text text-sm">© 2026 Maida Khan. Designed as a portfolio for product, design, development, and creative work.</p>
+        </footer>
     </div>
-   </section>
-
-   <section id="about" class="py-24 px-6">
-    <div class="max-w-4xl mx-auto">
-     <h2 class="text-4xl font-bold display-font gradient-text mb-8 text-center">About Me</h2>
-     <div class="glass-card rounded-3xl p-10">
-      <p class="text-lg primary-text leading-relaxed text-center">
-        I am a Computer Science student at Bahria University Lahore, with an interest in web development/Frontend. Currently working in NUSK IT Consultancy Limited, I enjoy creating modern UI designs and interactive websites & Graphics that are user-friendly.
-      </p>
-     </div>
-    </div>
-   </section>
-
-   <section id="skills" class="py-24 px-6 bg-black/20">
-    <div class="max-w-5xl mx-auto">
-     <h2 class="text-4xl font-bold display-font gradient-text mb-12 text-center">My Skills</h2>
-     <div class="flex flex-wrap justify-center gap-4">
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Microsoft Word Expert</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Teacher</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Call Center (Dispatcher)</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Web Developer</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Graphic / Logo Designer</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Management Skills</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Photography & Videography</div>
-      <div class="skill-badge px-6 py-3 rounded-full font-semibold">Communication & Interpersonal</div>
-     </div>
-    </div>
-   </section>
-
-   <section id="projects" class="py-24 px-6">
-    <div class="max-w-5xl mx-auto">
-     <h2 class="text-4xl font-bold display-font gradient-text mb-12 text-center">Professional Experience</h2>
-     <div class="space-y-8">
-      
-      <div class="glass-card rounded-2xl p-8">
-       <div class="flex flex-col md:flex-row justify-between mb-4">
-        <h3 class="text-2xl font-bold accent-cyan">Graphic Designer & Social Media Handler</h3>
-        <span class="secondary-text">Feb 2025 - Present</span>
-       </div>
-       <p class="text-purple-300 font-bold mb-3">NUSK IT Consultancy Ltd</p>
-       <p class="primary-text mb-4">Social media management, digital marketing, negotiation, critical thinking, and leadership.</p>
-       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-        <div class="bg-white/5 p-4 rounded-lg">
-            <p class="accent-cyan font-bold mb-2">Key Clients:</p>
-            <ul class="secondary-text space-y-1">
-                <li>• <a href="https://www.instagram.com/profkkhan" class="hover:text-white underline">Prof K Khan</a></li>
-                <li>• <a href="https://www.instagram.com/moonlight._.skies" class="hover:text-white underline">Moonlight Skies</a></li>
-            </ul>
-        </div>
-        <div class="bg-white/5 p-4 rounded-lg">
-            <p class="accent-cyan font-bold mb-2">Social Hubs:</p>
-            <ul class="secondary-text space-y-1">
-                <li>• X-Twitter Monetization Services</li>
-                <li>• YouTube Channel Management</li>
-            </ul>
-        </div>
-       </div>
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass-card rounded-2xl p-8">
-            <h3 class="text-xl font-bold primary-text">Online Teacher</h3>
-            <p class="text-purple-300 text-sm">Al-Suffah & Avalon Academy</p>
-            <p class="secondary-text mt-2">Aug 2023 - Present</p>
-        </div>
-        <div class="glass-card rounded-2xl p-8">
-            <h3 class="text-xl font-bold primary-text">Admission Dept. Intern</h3>
-            <p class="text-purple-300 text-sm">Bahria University Lahore</p>
-            <p class="secondary-text mt-2">July - Aug 2024 (Administrative Support)</p>
-        </div>
-      </div>
-
-      <div class="glass-card rounded-2xl p-8">
-        <h3 class="text-xl font-bold primary-text">Dispatcher - Call Center</h3>
-        <p class="text-purple-300 text-sm">Fast X Logistics</p>
-        <p class="secondary-text mt-2">Logistics management and real-time coordination.</p>
-      </div>
-
-      <div class="glass-card rounded-2xl p-8 border-l-4 border-cyan-500">
-        <h3 class="text-2xl font-bold gradient-text mb-4">Leadership Roles</h3>
-        <ul class="grid md:grid-cols-2 gap-4 primary-text">
-            <li class="flex items-center gap-2"><span>💎</span> IxDF Campus Lead</li>
-            <li class="flex items-center gap-2"><span>🎨</span> GDGoC BULC - Graphic Lead</li>
-            <li class="flex items-center gap-2"><span>🚀</span> MLSA BULC Member</li>
-            <li class="flex items-center gap-2"><span>🌐</span> WEBPak3 Leadership</li>
-        </ul>
-      </div>
-
-     </div>
-    </div>
-   </section>
-
-   <section id="contact" class="py-24 px-6 bg-black/30">
-    <div class="max-w-4xl mx-auto">
-     <h2 class="text-4xl font-bold display-font gradient-text mb-12 text-center">Get In Touch</h2>
-     <div class="glass-card rounded-3xl p-10 text-center">
-      <div class="grid md:grid-cols-2 gap-12 mb-10">
-       <div class="space-y-2">
-        <div class="text-4xl mb-2">✉️</div>
-        <p class="accent-cyan font-bold uppercase tracking-widest text-xs">Email Me</p>
-        <p class="primary-text font-medium">maidakhan1974@gmail.com</p>
-       </div>
-       <div class="space-y-2">
-        <div class="text-4xl mb-2">💼</div>
-        <p class="accent-cyan font-bold uppercase tracking-widest text-xs">LinkedIn</p>
-        <a href="http://www.linkedin.com/in/maddy-khanam-962189302" class="primary-text font-medium hover:text-cyan-400 break-all">linkedin.com/in/maddy-khanam...</a>
-       </div>
-      </div>
-      <div class="border-t border-white/10 pt-8">
-        <p class="text-purple-300 italic">"Open to freelance projects and collaboration opportunities"</p>
-      </div>
-     </div>
-    </div>
-   </section>
-
-   <footer class="py-12 text-center border-t border-white/10">
-     <p class="secondary-text text-sm">© 2026 Maida Khan</p>
-   </footer>
-  </div>
- </body>
+</body>
 </html>
